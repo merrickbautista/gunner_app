@@ -1,0 +1,10 @@
+<h1>MDL 252</h1>
+<table>
+	<% @students.each do |student| %>
+		<tr>
+			<td><%= student.first_name %></td>
+			<td><%= student.last_name %></td>
+			<td><%= student.score %></td>
+		</tr>
+	<% end %>
+</table>
