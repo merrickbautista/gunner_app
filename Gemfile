@@ -43,3 +43,8 @@ group :development, :test do
   gem 'spring'
 end
 
+#Additional gems
+gem 'gumby-framework'
+gem 'modernizr-rails'
+
+

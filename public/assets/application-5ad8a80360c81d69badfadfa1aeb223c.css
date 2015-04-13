@@ -10,9 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require gumby
- *= require_self
- *= require_tree .
+
+
  */
 
  #container {
@@ -25,3 +24,9 @@
 	color: blue;
 }
 
+/* line 9, /Users/merrickbautista/Code/rails_projects/gunner_app/app/assets/stylesheets/students.scss */
+#name {
+  font-size: 12px;
+  margin-top: -5px;
+  color: red;
+}

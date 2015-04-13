@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'students/new'
 
-  get 'students/index'
-
-  root to: 'static_pages#home'
+  root to: 'students#index'
   resources :students
 
   # The priority is based upon order of creation: first created -> highest priority.

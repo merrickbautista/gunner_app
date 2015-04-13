@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ui/jquery.validation
 //= require turbolinks
+//= require modernizr
+//= require gumby
 //= require_tree .
