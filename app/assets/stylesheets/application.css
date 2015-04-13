@@ -15,13 +15,12 @@
  *= require_tree .
  */
 
- #container {
+.container {
 	$cols: 12 !default;
 }
 
-#name {
+.name {
 	font-size: 12px;
 	margin-top: -5px;
-	color: blue;
 }
 
