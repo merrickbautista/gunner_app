@@ -14,13 +14,3 @@
  *= require_self
  *= require_tree .
  */
-
-.container {
-	$cols: 12 !default;
-}
-
-.name {
-	font-size: 12px;
-	margin-top: -5px;
-}
-

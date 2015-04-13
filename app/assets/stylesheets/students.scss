@@ -2,12 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#container {
-	$cols: 12 !default;
+body {
+	text-align: center;
 }
 
-#name {
-	font-size: 12px;
-	margin-top: -5px;
-	color: red;
+.profile {
+	text-align: center;
+	
+	/*-webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;*/
 }
+
+.name {
+	font-size: 12px;
+	margin-top: -10px;
+}
+
+/*
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+*/
+

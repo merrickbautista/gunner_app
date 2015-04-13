@@ -1,14 +1,14 @@
-<h1 style="text-align:center;">MDL 252</h1>
-<table>
+<h1>MDL 252</h1>
+<div class="student-table">
 	<% @row_counter = 0 %>
 	<% @students.each do |student| %>
 		<% if @row_counter == 0 %>
 			<div class="row">
 		<% end %>
 		<% @row_counter+=1 %>
-		<div class="two columns" style="border: 1px black solid; text-align:center;">
+		<div class="two columns profile">
 			<div>
-				<%= picture(student) %>
+				<%= link_to picture(student), '#' %>
 			</div>
 			<div class="name">
 				<%= "#{student.first_name} #{student.last_name}" %>
@@ -19,7 +19,18 @@
 			<% @row_counter = 0 %>
 		<% end %>
 	<% end %>
-</table>
-<div class="medium primary btn">
-  <a href="#">Primary</a>
+</div>
+
+<p style="margin-top: 50px;">Sort by:</p>
+
+<div class="sorting-buttons">
+	<div class="medium primary btn">
+	  <a href="#">A <i class="icon-right-thin"></i> Z</a>
+	</div>
+	<div class="medium primary btn">
+	  <a href="#">ICM</a>
+	</div>
+	<div class="medium primary btn">
+	  <a href="#">Top Gunner</a>
+	</div>
 </div>
