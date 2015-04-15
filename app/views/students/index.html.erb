@@ -8,10 +8,20 @@
 		<% @row_counter+=1 %>
 		<div class="two columns profile">
 			<div>
-				<%= link_to picture(student), '#' %>
+				<%#= link_to picture(student), '#'%>
+				<a href='#' class="toggle" gumby-trigger="#<%=student.last_name%>infodrawer"><%=picture(student)%></a>
+				<%#Make helper to | the rest of the students %>
 			</div>
-			<div class="name">
+			<div class="drawer" id="<%=student.last_name%>infodrawer">
 				<%= "#{student.first_name} #{student.last_name}" %>
+				<div class="mini-button-row">
+					<div class="small danger btn pretty">
+						<a href="#">PEW</a>
+					</div>
+					<div class="small primary btn pretty">
+						<a href="#">zzz...</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<% if @row_counter == 6 %>
@@ -25,12 +35,13 @@
 
 <div class="sorting-buttons">
 	<div class="medium primary btn">
-	  <a href="#">A <i class="icon-right-thin"></i> Z</a>
+	  <%= link_to "A <i class='icon-right-thin'></i> Z".html_safe, sort: "last_name" %>
 	</div>
 	<div class="medium primary btn">
-	  <a href="#">ICM</a>
+	  <%= link_to "ICM", sort: "icm, last_name" %>
 	</div>
 	<div class="medium primary btn">
-	  <a href="#">Top Gunner</a>
+	  <%= link_to "Top Gunner", sort: "score, last_name" %>
 	</div>
 </div>
+

@@ -3,6 +3,12 @@ class StudentsController < ApplicationController
   end
 
   def index
-  	@students = Student.all
+  	sort_column
+  	@students = Student.order(params[:sort])
   end
+
+  private
+  	def sort_column
+  		Student.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
+  	end
 end
