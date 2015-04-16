@@ -7,6 +7,10 @@ class StudentsController < ApplicationController
   	@students = Student.order(params[:sort])
   end
 
+  def show
+    @student = Student.find(params[:id])
+  end
+
   private
   	def sort_column
   		Student.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
