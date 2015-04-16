@@ -4,4 +4,5 @@ module StudentsHelper
 		last = student.last_name.downcase
 		image_tag "#{first}_#{last}_prof.png"
 	end
+
 end

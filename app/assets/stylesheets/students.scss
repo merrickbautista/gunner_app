@@ -6,25 +6,35 @@ body {
 	text-align: center;
 }
 
+.student-table {
+    width: 100%;
+    border: 5px green solid;
+}
+
 .profile {
 	text-align: center;
-	
-	/*-webkit-animation-name: example;
-    -webkit-animation-duration: 4s;
-    animation-name: example;
-    animation-duration: 4s;*/
+    border: 1px black solid;
+	/*-webkit-animation-name: shift-left;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: shift-left;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;*/
+
 }
 
 .name {
 	font-size: 12px;
-	margin-top: -10px;
+	margin-top: -15px;
 	background-color: red;
 	font-color: blue;
 }
 
+
 .drawer {
 	background-color: white;
 	font-size: 12px;
+    box-shadow: none;
 }
 
 .mini-button-row {
@@ -32,21 +42,25 @@ body {
 	margin-bottom: 5px;
 }
 
-/*
-@-webkit-keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
+
+@-webkit-keyframes shift-left {
+    0%   {left:0px; top:0px;}
+    100% {right:200px; top:0px;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+    }
 }
 
-@keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
+@keyframes shift-left {
+    0%   {left:0px; top:0px;}
+    100% {left:-50%; top:-50%;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+    }
 }
-*/
+
+
+
 

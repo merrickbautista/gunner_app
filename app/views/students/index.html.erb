@@ -8,20 +8,7 @@
 		<% @row_counter+=1 %>
 		<div class="two columns profile">
 			<div>
-				<%#= link_to picture(student), '#'%>
-				<a href='#' class="toggle" gumby-trigger="#<%=student.last_name%>infodrawer"><%=picture(student)%></a>
-				<%#Make helper to | the rest of the students %>
-			</div>
-			<div class="drawer" id="<%=student.last_name%>infodrawer">
-				<%= "#{student.first_name} #{student.last_name}" %>
-				<div class="mini-button-row">
-					<div class="small danger btn pretty">
-						<a href="#">PEW</a>
-					</div>
-					<div class="small primary btn pretty">
-						<%= link_to "zzz...", student_path(student) %>
-					</div>
-				</div>
+				<a href='#' class="toggle" gumby-trigger="#<%=student.last_name%>infodrawer.drawer"><%=picture(student)%></a>
 			</div>
 		</div>
 		<% if @row_counter == 6 %>
