@@ -1,34 +1,37 @@
-<h1>MDL 252</h1>
-<div class="student-table">
+<h1 style=>MDL 252</h1>
+<div class="ui six column grid">
 	<% @row_counter = 0 %>
 	<% @students.each do |student| %>
-		<% if @row_counter == 0 %>
-			<div class="row">
-		<% end %>
-		<% @row_counter+=1 %>
-		<div class="two columns profile">
-			<div>
-				<a href='#' class="toggle" gumby-trigger="#<%=student.last_name%>infodrawer.drawer"><%=picture(student)%></a>
-			</div>
-		</div>
-		<% if @row_counter == 6 %>
-			</div>
-			<% @row_counter = 0 %>
-		<% end %>
+		<div class="column" style="text-align:center;">
+			<div class="ui fluid card" style="margin-bottom: -20px;">
+      			<div class="ui tiny image" style="padding: 5px;">
+        			<%=picture(student)%>
+     			</div>
+     			<div class="right floated red ui button" style="margin-top: -95px; margin-right: 2px; margin-left: 2px;">
+      				<i class="add icon"></i>
+      				Gunner
+    			</div>
+    			<div class="right floated teal ui button" style="margin-top: -55px; margin-right: 2px; margin-left: 2px;">
+      				<i class="add icon"></i>
+      				Zzzzzz
+    			</div>
+      			<div class="content" style="margin-top: -8px;">
+        			<a class="header"><%=student.first_name%> <%=student.last_name%></a>
+      			</div>
+      			<div class="meta" style="margin-top: -15px;">
+        			<a>ICM <%=student.icm%></a>
+      			</div>
+    		</div>
+    	</div>
 	<% end %>
 </div>
 
+
 <p style="margin-top: 50px;">Sort by:</p>
 
-<div class="sorting-buttons">
-	<div class="medium primary btn">
-	  <%= link_to "A <i class='icon-right-thin'></i> Z".html_safe, sort: "last_name" %>
-	</div>
-	<div class="medium primary btn">
-	  <%= link_to "ICM", sort: "icm, last_name" %>
-	</div>
-	<div class="medium primary btn">
-	  <%= link_to "Top Gunner", sort: "score, last_name" %>
-	</div>
+<div class="ui buttons">
+	  <%= link_to "<button class=\"ui yellow button\"><i class='sort alphabet ascending icon'></i>Last Name</button>".html_safe, sort: "last_name" %>
+	  <%= link_to "<button class=\"ui green button\"><i class='sort numeric ascending icon'></i>ICM</button>".html_safe, sort: "icm, last_name"%>
+	  <%= link_to "<button class=\"ui blue button\">Top Gunner</button>".html_safe, sort: "score, last_name" %>
 </div>
 
