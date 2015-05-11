@@ -5,8 +5,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+$(document).ready(function(){
+    $('.ui.dropdown').dropdown();
+});
+</script>
 </head>
 <body>
+<div class="ui inverted menu" style="text-align: left;">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="doctor icon"></i> Profile
+  </a>
+  <div class="ui dropdown item">
+    <i class="checkered flag icon"></i> Gunner Race<i class="caret down icon"></i>
+    <div class="menu">
+      <a class="item">Gunner of the Week</a>
+      <a class="item">Gunner of the Year</a>
+    </div>
+  </div>
+  <div class="ui dropdown item">
+  	<i class="moon icon"></i> Sleeper Race<i class="caret down icon"></i>
+  	<div class="menu">
+      <a class="item">Sleeper of the Week</a>
+      <a class="item">Sleeper of the Year</a>
+    </div>
+  </div>
+</div>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
