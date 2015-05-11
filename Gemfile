@@ -46,4 +46,5 @@ end
 #Additional gems
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 gem 'jquery-turbolinks'
+gem 'devise'
 
